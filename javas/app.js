@@ -458,6 +458,10 @@ function random(min, max) {
     parent.appendChild(mytable);
 
     let time=[' ','6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm','Daily Location Total'];
+    // ,'Daily Location Total'
+
+    
+      
 
     Location.head=function() {
 
@@ -471,12 +475,12 @@ function random(min, max) {
         
         let thead=document.createElement('th');
         mytable.appendChild(thead);
-
         thead.textContent=time[i];
 
         }
-
+        
     }
+    
 Location.head();
 
 
@@ -488,30 +492,27 @@ Location.prototype.render=function() {
 
     let tdata=document.createElement('td');
         row1.appendChild(tdata);
-
-        row1.appendChild(tdata);
         row1.textContent=this.name;
 
-        
-
-
-   
-   
-    
-        
-    
-   
-    for (let i = 0; i < time.length; i++) {
+    for (let i = 0; i < time.length-1; i++) {
         
         let tdata=document.createElement('td');
         row1.appendChild(tdata);
        
    
         tdata.textContent =this.avgCookiesperHour[i] ;
+
       
 
     } 
+   
+    
 
+    // let tdata1=document.createElement('td');
+    // row1.appendChild(tdata1);
+
+    // tdata1.textContent='hello';
+    
 };
 
 
@@ -521,16 +522,48 @@ city2.render();
 city3.render();
 city4.render();
 city5.render();
-Location.prototype.render();
+
+// Location.prototype.render();
 
 
 
 Location.foteer=function(){
 
+let thead2=document.createElement('th');
+mytable.appendChild(thead2);
+thead2.textContent='total';
+
+
+for (let i = 0; i < time.length-1; i++) {
+    
+    
+
+let total=city1.avgCookiesperHour[i]+city2.avgCookiesperHour[i]+city3.avgCookiesperHour[i]+city4.avgCookiesperHour[i]+city5.avgCookiesperHour[i];
+
+let thead2=document.createElement('th');
+mytable.appendChild(thead2);
+thead2.textContent=total;
+
+}
+
 
 
 }
+
 Location.foteer();
+
+
+Location.dtotal =function(){
+
+    let tdata1=document.createElement('td');
+    row1.appendChild(tdata1);
+    tdata1.textContent='hello';
+
+}
+Location.dtotal();
+
+
+
 
 
 
