@@ -1,4 +1,25 @@
+*{
+box-sizing: border-box;
+
+}
+body{background-color: #FAF1E6;
+
+}
+
 table,tr,th,td{
     border: 0.5px solid black;
     border-collapse: collapse;
+  }
+
+  div{
+    background-color:#01937C;
+  }
+  div ul li{
+
+    
+    display: inline-block;
+  }
+
+  button{
+    background-color: black;
   }

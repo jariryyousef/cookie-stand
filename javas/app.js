@@ -382,7 +382,7 @@
 // location5.render();
 
 
-console.log('hello');
+// console.log('test');
 
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -391,7 +391,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let Location = [];
+let locations =[];
 function Location(name, min, max, avg) {
 
 
@@ -401,9 +401,13 @@ function Location(name, min, max, avg) {
     this.avg = avg;
     this.randomCustomers = [];
     this.avgCookiesperHour = [];
-    //totalcookieperday=0;
-    //location.push(this);
+    this.totalcookieperday=0;
+    locations.push(this);
+
+    // console.log(locations);
 };
+
+
 
 
 
@@ -429,30 +433,30 @@ Location.prototype.getavgCookiesperHour = function () {
 let city1 = new Location('Seattle', 23, 65, 6.3);
 city1.getrandomCustomers();
 city1.getavgCookiesperHour();
-console.log(city1);
+// console.log(city1);
 
 
 
 let city2 = new Location('tokyo', 3, 24, 1.2);
 city2.getrandomCustomers();
 city2.getavgCookiesperHour();
-console.log(city2);
+// console.log(city2);
 
 
 let city3 = new Location('dubai', 11, 38, 2.3);
 city3.getrandomCustomers();
 city3.getavgCookiesperHour();
-console.log(city3);
+// console.log(city3);
 
 let city4 = new Location('paris', 20, 38, 2.3);
 city4.getrandomCustomers();
 city4.getavgCookiesperHour();
-console.log(city4);
+// console.log(city4);
 
 let city5 = new Location('lima', 2, 10, 4.6);
 city5.getrandomCustomers();
 city5.getavgCookiesperHour();
-console.log(city5);
+// console.log(city5);
 
 
 // for (let i = 0; i < array.Location; i++) {
@@ -554,15 +558,28 @@ Location.foteer = function () {
 
 Location.foteer();
 
+// Location.locationtotal=function (){
 
-Location.dtotal = function () {
+// for (let i = 0; i < hours.length; i++) {
+//     this.totalcookieperday+=locations[i].avgCookiesperHour;
+//     console.log(locations[i].avgCookiesperHour);
+//     // console.log(totalcookieperday);
+    
+// }
+// }
 
-    let tdata1 = document.createElement('td');
-    row1.appendChild(tdata1);
-    tdata1.textContent = 'hello';
+// Location.locationtotal();
 
-}
-Location.dtotal();
+// console.log(locations.this.avgCookiesperHour);
+
+// Location.dtotal = function () {
+
+//     let tdata1 = document.createElement('td');
+//     row1.appendChild(tdata1);
+//     tdata1.textContent = 'hello';
+
+// }
+// Location.dtotal();
 
 
 
