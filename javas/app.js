@@ -545,7 +545,7 @@ Location.foteer = function () {
             thead3.textContent = totalcookieperday;
 
             
-            console.log(totalcookieperday);
+            // console.log(totalcookieperday);
         }
 
     }
@@ -555,3 +555,47 @@ Location.foteer = function () {
 }
 
 Location.foteer();
+
+
+let myform=document.getElementById('myform');
+
+myform.addEventListener('submit',formsubmit);
+
+
+function formsubmit (event){
+    // method cancels the event if it is cancelable
+    // event.preventDefault();
+    event.preventDefault();
+    console.log('test');
+
+
+    let name=event.target.namefiled.value;
+    console.log(name);
+
+    let minamum= Number(event.target.min.value);
+    console.log(minamum);   
+
+    let maximum=Number(event.target.max.value) ;
+    console.log(maximum);
+
+    let average=Number(event.target.average.value);
+    console.log(average);
+
+    let newcity = new Location(name,minamum,maximum,average)
+    reset();
+    newcity.getrandomCustomers();
+    newcity.getavgCookiesperHour();
+    console.log(newcity);
+
+
+    newcity.render();
+    Location.foteer();
+      
+
+}
+
+function reset() {
+    mytable.textContent='';
+
+}
+
