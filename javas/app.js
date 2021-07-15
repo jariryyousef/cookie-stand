@@ -582,12 +582,18 @@ function formsubmit (event){
     console.log(average);
 
     let newcity = new Location(name,minamum,maximum,average)
-    reset();
+    // reset();
     newcity.getrandomCustomers();
     newcity.getavgCookiesperHour();
     console.log(newcity);
-
-
+    reset();
+    Location.head();
+    city1.render();
+city2.render();
+city3.render();
+city4.render();
+city5.render();
+    // reset();
     newcity.render();
     Location.foteer();
       
