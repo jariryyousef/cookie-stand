@@ -23,3 +23,8 @@ table,tr,th,td{
   button{
     background-color: black;
   }
+  #about{
+background-color: lavender;
+    font-size: 20px;
+    font-family: fantasy;
+  }
